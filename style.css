@@ -109,6 +109,9 @@ main
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-top: 1px solid #999;
+    margin-top: 10px;
+    padding: 15px 0 7px;
 }
 
 .popup-info .btn-group .info-btn
@@ -128,4 +131,17 @@ main
     font-weight: 600;
     box-shadow:  0 0 10px rgba(0, 0, 0, .3);
     cursor: pointer;
+}
+
+.popup-info .btn-group .info-btn:nth-child(1)
+{
+    background: transparent;
+    color: aqua;
+}
+
+.popup-info .btn-group .info-btn:nth-child(1):hover
+{
+    background: aqua;
+    color: #fff;
+    border: 1px solid black;
 }
