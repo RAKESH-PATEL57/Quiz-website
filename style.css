@@ -9,7 +9,12 @@
 main
 {
     height: 100vh;
+    transition: .3s;
+}
 
+main.blurbg
+{
+    filter: blur(2px);
 }
 
 .header
@@ -83,10 +88,20 @@ main
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(.9);
     width: 500px;
     background: purple;
     border-radius: 6px;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease-in;
+}
+
+.popup-info.show
+{
+    opacity: 1;
+    pointer-events:auto;
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .popup-info h2
@@ -131,12 +146,14 @@ main
     font-weight: 600;
     box-shadow:  0 0 10px rgba(0, 0, 0, .3);
     cursor: pointer;
+    transition: .5s;
 }
 
 .popup-info .btn-group .info-btn:nth-child(1)
 {
     background: transparent;
     color: aqua;
+    
 }
 
 .popup-info .btn-group .info-btn:nth-child(1):hover
@@ -144,4 +161,10 @@ main
     background: aqua;
     color: #fff;
     border: 1px solid black;
+}
+
+.popup-info .btn-group .info-btn:nth-child(2):hover
+{
+    background: rgb(9, 178, 178);
+    border-color: rgb(9, 178, 178);
 }
