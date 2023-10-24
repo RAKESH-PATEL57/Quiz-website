@@ -197,11 +197,14 @@ main.blurbg
 .quiz-section
 {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     /* left: -50%; */
     left: 0;
     width: 100%;
     width: 100%;
-    background: lightskyblue;
+    background: #09001d;
     transition: .6s ease-in-out;
     z-index: 100;
 }
@@ -212,4 +215,33 @@ main.blurbg
     left: 0%;
     width: 100%;
     width: 100%;
+}
+
+.quiz-section .quiz-box
+{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid aqua;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+}
+
+.quiz-box h1
+{
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(300deg, transparent, aqua, transparent);
+    border-radius: 6px;
+}
+
+.quiz-box .quiz-header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid aqua;
 }
