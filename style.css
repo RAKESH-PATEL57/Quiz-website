@@ -5,22 +5,45 @@
     box-sizing: border-box;
 }
 
+body
+{
+    color: #fff;
+    background: #09001d;
+    overflow: hidden;
+}
+
 
 main
 {
     height: 100vh;
-    transition: .3s;
+    transition: .3s ;
 }
 
 main.blurbg
 {
     filter: blur(2px);
+    pointer-events: none;
+}
+
+.container
+{
+    display: flex;
+    height: 100vh;
+    width: 200%;
 }
 
 .header
 {
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    z-index: 100;
+    align-items: center;
 }
 
 .navbar a:hover
@@ -30,7 +53,9 @@ main.blurbg
 
 .home
 {
-    height: 100vh;
+    position: relative;
+    left: -50%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -167,4 +192,24 @@ main.blurbg
 {
     background: rgb(9, 178, 178);
     border-color: rgb(9, 178, 178);
+}
+
+.quiz-section
+{
+    position: relative;
+    /* left: -50%; */
+    left: 0;
+    width: 100%;
+    width: 100%;
+    background: lightskyblue;
+    transition: .6s ease-in-out;
+    z-index: 100;
+}
+
+.quiz-section.quizSection-Show-hide
+{
+    position: relative;
+    left: 0%;
+    width: 100%;
+    width: 100%;
 }
