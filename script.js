@@ -21,3 +21,7 @@ continueBtn.onclick = () => {
     popupInfo.classList.remove('show');
     main.classList.remove('blurbg');
 }
+
+
+
+
