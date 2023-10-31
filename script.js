@@ -62,7 +62,7 @@ let questions = [
       `(A)<body background="yellow">`,
       `(B)<background>yellow</background>`,
       `(C)<body style="background-color:yellow">`,
-      `(D)<background color="yellow">text<background>`,
+      "(D)<background color="yellow">text<background>"
     ],
   },
 
@@ -74,7 +74,7 @@ let questions = [
       `(A) <a name="">A</a>`,
       `(B) <a>B</a>`,
       `(C) <a href="http://www.example.com">example</a>`,
-      `(D)  <a url="http://www.example.com">example</a>`,
+      `(D)  <a url="http://www.example.com">example</a>`
     ],
   },
 
@@ -86,7 +86,7 @@ let questions = [
       `(A) <mail href="a@b">`,
       `(B) <mail>a@b</mail>`,
       `(C) <a href="a@b">`,
-      `(D) <a href="mailto:a@b.com">`,
+      `(D) <a href="mailto:a@b.com">`
     ],
   },
 
@@ -98,7 +98,7 @@ let questions = [
       `(A) <a href="url" new>`,
       `(B) <a href="url" target="new">`,
       `(C) <a href="url" target="_blank">`,
-      `(D) <a href="url" target="">`,
+      `(D) <a href="url" target="">`
     ],
   },
 
@@ -110,7 +110,7 @@ let questions = [
       `(A) <table><head><tfoot>`,
       `(B) <table><tr><td>`,
       `(C) <table><tr><tt>`,
-      `(D) <thead><body><tr>`,
+      `(D) <thead><body><tr>`
     ],
   },
 ];
