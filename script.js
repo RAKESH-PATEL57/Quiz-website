@@ -23,13 +23,22 @@ continueBtn.onclick = () => {
     main.classList.remove('blurbg');
     quizBox.classList.add('quizBox-Show-hide');
 
+    showQuestions(0);
 }
 
 
 // changing questions on button click   
 let questionCount = 0;
 
-function getQuestion(index)
+const nextBtn = document.querySelector('.nextBtn');
+
+nextBtn.onclick = () => {
+
+    questionCount++;
+    showQuestions(questionCount);
+}
+
+function showQuestions(index)
 {
     const questionText = document.querySelector('.question-text');
     questionText.textContent = `${questions[index].numb}. ${questions[index].question}`;
@@ -43,9 +52,9 @@ let questions = [
     question:"What is the preferred way for adding a background color in HTML?",
     answer:`<body style="background-color:yellow">`,
     options: [
-        `(A) <body background="yellow">`
-        `(B) <background>yellow</background>`
-        `(C) < body style="background-color:yellow">`
+        `(A) <body background="yellow">`,
+        `(B) <background>yellow</background>`,
+        `(C) < body style="background-color:yellow">`,
         `(D) <background color="yellow">text<background>`
     ]
   },
@@ -55,9 +64,9 @@ let questions = [
     question:"What is the correct HTML for creating a hyperlink?",
     answer:`<a href="http://www.example.com">example</a>`,
     options: [
-        `(A) <a name="">A</a>`
-        `(B) <a>B</a>`
-        `(C) <a href="http://www.example.com">example</a>`
+        `(A) <a name="">A</a>`,
+        `(B) <a>B</a>`,
+        `(C) <a href="http://www.example.com">example</a>`,
         `(D)  <a url="http://www.example.com">example</a>`
     ]
   },
@@ -67,9 +76,9 @@ let questions = [
     question:"How can you create an e-mail link?",
     answer:`<a href="mailto:a@b.com">`,
     options: [
-        `(A) <mail href="a@b">`
-        `(B) <mail>a@b</mail>`
-        `(C) <a href="a@b">`
+        `(A) <mail href="a@b">`,
+        `(B) <mail>a@b</mail>`,
+        `(C) <a href="a@b">`,
         `(D) <a href="mailto:a@b.com">`
     ]
   },
@@ -79,9 +88,9 @@ let questions = [
     question:"How can you open a link in a new browser window?",
     answer:`<a href="url" target="_blank">`,
     options: [
-        `(A) <a href="url" new>`
-        `(B) <a href="url" target="new">`
-        `(C) <a href="url" target="_blank">`
+        `(A) <a href="url" new>`,
+        `(B) <a href="url" target="new">`,
+        `(C) <a href="url" target="_blank">`,
         `(D) <a href="url" target="">`
     ]
   },
@@ -91,9 +100,9 @@ let questions = [
     question:"Which of these tags are all <table> tags?",
     answer:`<table><tr><td>`,
     options: [
-        `(A) <table><head><tfoot>`
-        `(B) <table><tr><td>`
-        `(C) <table><tr><tt>`
+        `(A) <table><head><tfoot>`,
+        `(B) <table><tr><td>`,
+        `(C) <table><tr><tt>`,
         `(D) <thead><body><tr>`
     ]
   },

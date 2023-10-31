@@ -318,7 +318,7 @@ main.blurbg
     cursor: pointer;
     color: white;
     font-weight: 600;
-    pointer-events: none;
+    /* pointer-events: none; */
     transition: .3s;
 }
 
