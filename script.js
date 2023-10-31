@@ -22,6 +22,17 @@ continueBtn.onclick = () => {
     popupInfo.classList.remove('show');
     main.classList.remove('blurbg');
     quizBox.classList.add('quizBox-Show-hide');
+
+}
+
+
+// changing questions on button click   
+let questionCount = 0;
+
+function getQuestion(index)
+{
+    const questionText = document.querySelector('.question-text');
+    questionText.textContent = `${questions[index].numb}. ${questions[index].question}`;
 }
 
 
@@ -88,6 +99,8 @@ let questions = [
   },
     
 ];
+
+
 
 
 
