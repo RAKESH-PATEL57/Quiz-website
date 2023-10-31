@@ -62,7 +62,7 @@ let questions = [
       `(A)<body background="yellow">`,
       `(B)<background>yellow</background>`,
       `(C)<body style="background-color:yellow">`,
-      "(D)<background color="yellow">text<background>"
+      `"(D)<background color="yellow">text<background>"`
     ],
   },
 
