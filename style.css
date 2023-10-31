@@ -200,8 +200,8 @@ main.blurbg
     display: flex;
     align-items: center;
     justify-content: center;
-    /* left: -50%; */
-    left: 0;
+    left: -50%;
+    /* left: 0; */
     width: 100%;
     width: 100%;
     background: #09001d;
@@ -227,6 +227,18 @@ main.blurbg
     display: flex;
     flex-direction: column;
     padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+}
+
+.quiz-section .quiz-box.quizBox-Show-hide
+{
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: .4s;
 }
 
 .quiz-box h1

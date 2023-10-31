@@ -4,6 +4,7 @@ const exitQuiz = document.querySelector('.exit-btn');
 const main = document.querySelector('.main');
 const continueBtn = document.querySelector('.continue-btn');
 const quizSection = document.querySelector('.quiz-section');
+const quizBox = document.querySelector('.quiz-box');
 
 startBtn.onclick = () => {
     popupInfo.classList.add('show');
@@ -20,6 +21,7 @@ continueBtn.onclick = () => {
     quizSection.classList.add('quizSection-Show-hide');
     popupInfo.classList.remove('show');
     main.classList.remove('blurbg');
+    quizBox.classList.add('quizBox-Show-hide');
 }
 
 
