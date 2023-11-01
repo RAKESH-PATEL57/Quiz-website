@@ -56,61 +56,61 @@ let questions = [
   {
     numb: 1,
     question:
-      "What is the preferred way for adding a background color in HTML?",
-    answer: `<body style="background-color:yellow">`,
+      "Which of the following JavaScript cannot do?",
+    answer: "All of the Above",
     options: [
-      `(A)<body background="yellow">`,
-      `(B)<background>yellow</background>`,
-      `(C)<body style="background-color:yellow">`,
-      `(D)<background color="yellow">text<background>`
+      "(A)JavaScript can react to events",
+      "(B)JavaScript can manipulate HTML elements",
+      "(C)JavaScript can be use to validate data",
+      "(D)All of the Above"
     ],
   },
 
   {
     numb: 2,
-    question: "What is the correct HTML for creating a hyperlink?",
-    answer: `<a href="http://www.example.com">example</a>`,
+    question: "Whats so great about XML?",
+    answer: "Both A & B",
     options: [
-      `(A) <a name="">A</a>`,
-      `(B) <a>B</a>`,
-      `(C) <a href="http://www.example.com">example</a>`,
-      `(D)  <a url="http://www.example.com">example</a>`
+      "(A)Easy data exchange",
+      "(B)High speed on network",
+      "(C)Only B.is correct",
+      "(D)Both A & B"
     ],
   },
 
   {
     numb: 3,
-    question: "How can you create an e-mail link?",
-    answer: `<a href="mailto:a@b.com">`,
+    question: "Which is not a property of attribute Behaviour of <Marquee> tag?",
+    answer: "blur",
     options: [
-      `(A) <mail href="a@b">`,
-      `(B) <mail>a@b</mail>`,
-      `(C) <a href="a@b">`,
-      `(D) <a href="mailto:a@b.com">`
+      "(A) alternate",
+      "(B) blur",
+      "(C) scroll",
+      "(D) slide"
     ],
   },
 
   {
     numb: 4,
-    question: "How can you open a link in a new browser window?",
-    answer: `<a href="url" target="_blank">`,
+    question: "_________ keyword is used to declare variables in javascript.",
+    answer: "Var",
     options: [
-      `(A) <a href="url" new>`,
-      `(B) <a href="url" target="new">`,
-      `(C) <a href="url" target="_blank">`,
-      `(D) <a href="url" target="">`
+      "(A) Var",
+      "(B) Dim",
+      "(C) String",
+      "(D) None of the above"
     ],
   },
 
   {
     numb: 5,
-    question: "Which of these tags are all <table> tags?",
-    answer: `<table><tr><td>`,
+    question: "The attribute used to define a new namespace is ?",
+    answer: "Xmlns",
     options: [
-      `(A) <table><head><tfoot>`,
-      `(B) <table><tr><td>`,
-      `(C) <table><tr><tt>`,
-      `(D) <thead><body><tr>`
+      "(A) XMLNS",
+      "(B) XmlNameSpace",
+      "(C) Xmlns",
+      "(D) XmlNs"
     ],
   },
 ];
