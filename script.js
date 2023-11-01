@@ -23,16 +23,25 @@ continueBtn.onclick = () => {
   quizBox.classList.add("quizBox-Show-hide");
 
   showQuestions(0);
+  questionCounter(1);
 };
 
 // changing questions on button click
 let questionCount = 0;
+let questionNumber = 1;
 
 const nextBtn = document.querySelector(".nextBtn");
 
 nextBtn.onclick = () => {
-  questionCount++;
-  showQuestions(questionCount);
+
+  if(questionCount < questions.length -1) 
+  {
+    questionCount++;
+    showQuestions(questionCount);
+    questionNumber++;
+    questionCounter(questionNumber);
+  }
+
 }
 
 // qestion answers options *******************************
@@ -49,6 +58,12 @@ function showQuestions(index) {
   
                    
    optionList.innerHTML = optionTag;                
+}
+
+function questionCounter(index)
+{
+  const questionTotal = document.querySelector('.question-total');
+  questionTotal.textContent = `${index} of ${questions.length} Questions`;
 }
 
 // Question section meaking
