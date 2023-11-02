@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration:none;
 }
 
 :root
@@ -53,9 +54,16 @@ main.blurbg
     align-items: center;
 }
 
-.navbar a:hover
+header .logo, .navbar a
 {
     color:var(--alpha-color);
+    font-size: 1.4rem;
+    transition: .3s;
+}
+
+header .logo:hover, .navbar a:hover
+{
+    color:var(--hover-color);
 }
 
 .home
@@ -124,7 +132,7 @@ main.blurbg
     width: 500px;
     background: purple;
     border-radius: 6px;
-    opacity: 1;
+    opacity: 0;
     pointer-events: none;
     transition: .3s ease-in;
     padding: 2rem;
@@ -143,12 +151,13 @@ main.blurbg
     font-size: 50px;
     color: var(--alpha-color);
     text-align: center;
+    margin-bottom: .8rem;
 }
 
 .popup-info .info
 {
     display: inline-block;
-    font-size: 16px;
+    font-size: 1.2rem;
     color: #ece7e7;
     font-weight: 500;
     margin: 4px 0;
