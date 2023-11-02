@@ -5,6 +5,13 @@
     box-sizing: border-box;
 }
 
+:root
+{
+    --alpha-color:aqua;
+    --hover-color:rgb(9, 178, 178);
+    --font-color:#fff;
+}
+
 body
 {
     color: #fff;
@@ -48,7 +55,7 @@ main.blurbg
 
 .navbar a:hover
 {
-    color:aqua
+    color:var(--alpha-color);
 }
 
 .home
@@ -88,10 +95,10 @@ main.blurbg
 {
     width: 190px;
     height: 55px;
-    background: aqua;
+    background: var(--alpha-color);
     outline: none;
     border-radius: 6px;
-    box-shadow: 0 0 10px aqua;
+    box-shadow: 0 0 10px var(--alpha-color);
     font-size: 18px;
     /* color: #fff; */
     letter-spacing: 1px;
@@ -117,9 +124,11 @@ main.blurbg
     width: 500px;
     background: purple;
     border-radius: 6px;
-    opacity: 0;
+    opacity: 1;
     pointer-events: none;
     transition: .3s ease-in;
+    padding: 2rem;
+    line-height: 2rem;
 }
 
 .popup-info.show
@@ -132,14 +141,15 @@ main.blurbg
 .popup-info h2
 {
     font-size: 50px;
-    color: aqua;
+    color: var(--alpha-color);
+    text-align: center;
 }
 
 .popup-info .info
 {
     display: inline-block;
     font-size: 16px;
-    color: #333;
+    color: #ece7e7;
     font-weight: 500;
     margin: 4px 0;
 }
@@ -161,8 +171,8 @@ main.blurbg
     align-items: center;
     width: 130px;
     height: 45px;
-    background: aqua;
-    border:  2px solid aqua;
+    background: var(--alpha-color);
+    border:  2px solid var(--alpha-color);
     outline: none;
     border-radius: 6px;
     text-decoration: none;
@@ -177,21 +187,21 @@ main.blurbg
 .popup-info .btn-group .info-btn:nth-child(1)
 {
     background: transparent;
-    color: aqua;
+    color: var(--alpha-color);
     
 }
 
 .popup-info .btn-group .info-btn:nth-child(1):hover
 {
-    background: aqua;
+    background: var(--alpha-color);
     color: #fff;
     border: 1px solid black;
 }
 
 .popup-info .btn-group .info-btn:nth-child(2):hover
 {
-    background: rgb(9, 178, 178);
-    border-color: rgb(9, 178, 178);
+    background: var(--hover-color);
+    border-color: var(--hover-color);
 }
 
 .quiz-section
@@ -222,7 +232,7 @@ main.blurbg
     position: relative;
     width: 500px;
     background: transparent;
-    border: 2px solid aqua;
+    border: 2px solid var(--alpha-color);
     border-radius: 6px;
     display: flex;
     flex-direction: column;
@@ -245,7 +255,7 @@ main.blurbg
 {
     font-size: 32px;
     text-align: center;
-    background: linear-gradient(300deg, transparent, aqua, transparent);
+    background: linear-gradient(300deg, transparent, var(--alpha-color), transparent);
     border-radius: 6px;
 }
 
@@ -255,7 +265,7 @@ main.blurbg
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
-    border-bottom: 2px solid aqua;
+    border-bottom: 2px solid var(--alpha-color);
     margin-bottom: 30px;
 }
 
@@ -266,7 +276,7 @@ main.blurbg
 
 .quiz-header .header-score
 {
-    background: aqua;
+    background: var(--alpha-color);
     font-weight: 600;
     color: #000;
     padding: 8px;
@@ -296,7 +306,7 @@ main.blurbg
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid aqua;
+    border-top: 1px solid var(--alpha-color);
     padding-top: 20px;
     margin-top: 20px;
 }
@@ -324,8 +334,8 @@ main.blurbg
 
 .quiz-footer .nextBtn:hover
 {
-    background: aqua;
-    border-color: aqua;
+    background: var(--alpha-color);
+    border-color: var(--alpha-color);
     color: black;
 }
 
