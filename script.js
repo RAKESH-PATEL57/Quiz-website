@@ -57,7 +57,33 @@ function showQuestions(index) {
                    <div class="option"><span>${questions[index].options[3]}</span></div>`;
   
                    
-   optionList.innerHTML = optionTag;                
+   optionList.innerHTML = optionTag;  
+   
+   const option = document.querySelectorAll('.option');
+
+   for(let i =0; i < option.length; i++)
+   {
+     option[i].setAttribute('onclick', 'optionSelected(this)');
+   }
+}
+
+function optionSelected(answer)
+{
+  let userAnswer = answer.textContent;
+  let correctAnswer = questions[questionCount].answer;
+
+  console.log(correctAnswer);
+
+  if(userAnswer == correctAnswer)
+  {
+    answer.classList.add('correct');
+  }
+  
+  else
+  {
+    answer.classList.add('incorrect');
+  }
+
 }
 
 function questionCounter(index)
