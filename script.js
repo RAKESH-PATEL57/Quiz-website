@@ -72,15 +72,17 @@ function optionSelected(answer)
   let userAnswer = answer.textContent;
   let correctAnswer = questions[questionCount].answer;
 
-  console.log(correctAnswer);
+  console.log(userAnswer);
 
   if(userAnswer == correctAnswer)
   {
     answer.classList.add('correct');
+    console.log(correctAnswer);
   }
   
   else
   {
+
     answer.classList.add('incorrect');
   }
 
@@ -98,7 +100,7 @@ let questions = [
     numb: 1,
     question:
       "Which of the following JavaScript cannot do?",
-    answer: "All of the Above",
+    answer: "(D)All of the Above",
     options: [
       "(A)JavaScript can react to events",
       "(B)JavaScript can manipulate HTML elements",
@@ -110,7 +112,7 @@ let questions = [
   {
     numb: 2,
     question: "Whats so great about XML?",
-    answer: "Both A & B",
+    answer: "(D)Both A & B",
     options: [
       "(A)Easy data exchange",
       "(B)High speed on network",
@@ -122,7 +124,7 @@ let questions = [
   {
     numb: 3,
     question: "Which is not a property of attribute Behaviour of <Marquee> tag?",
-    answer: "blur",
+    answer: "(B) blur",
     options: [
       "(A) alternate",
       "(B) blur",
@@ -134,7 +136,7 @@ let questions = [
   {
     numb: 4,
     question: "_________ keyword is used to declare variables in javascript.",
-    answer: "Var",
+    answer: "(A) Var",
     options: [
       "(A) Var",
       "(B) Dim",
@@ -146,7 +148,7 @@ let questions = [
   {
     numb: 5,
     question: "The attribute used to define a new namespace is ?",
-    answer: "Xmlns",
+    answer: "(C) Xmlns",
     options: [
       "(A) XMLNS",
       "(B) XmlNameSpace",
