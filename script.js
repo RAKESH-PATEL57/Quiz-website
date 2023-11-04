@@ -166,8 +166,22 @@ let questions = [
 
 // *******************   result section  ******************************
 const resultBox = document.querySelector('.result-box');
+const goHomeBtn = document.querySelector('.goHome-btn');
+const tryAgainBtn = document.querySelector('.tryAgain-btn');
 
 function showResultBox() {
   quizBox.classList.remove('quizBox-Show-hide');
   resultBox.classList.add('resultBox-Show-hide');
 }
+
+tryAgainBtn.onclick = () => {
+  quizBox.classList.add('quizBox-Show-hide');
+  resultBox.classList.remove('resultBox-Show-hide');
+};
+
+goHomeBtn.onclick = () => {
+  main.classList.add("blurbg");
+  resultBox.classList.remove('resultBox-Show-hide');
+};
+
+
