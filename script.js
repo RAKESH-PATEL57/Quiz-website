@@ -42,6 +42,11 @@ nextBtn.onclick = () => {
     questionCounter(questionNumber);
   }
 
+  else
+  {
+    showResultBox();
+  }
+
 }
 
 // qestion answers options *******************************
@@ -157,3 +162,12 @@ let questions = [
     ],
   },
 ];
+
+
+// *******************   result section  ******************************
+const resultBox = document.querySelector('.result-box');
+
+function showResultBox() {
+  quizBox.classList.remove('quizBox-Show-hide');
+  resultBox.classList.add('resultBox-Show-hide');
+}
