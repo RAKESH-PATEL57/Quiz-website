@@ -26,6 +26,9 @@ continueBtn.onclick = () => {
   questionCounter(1);
 };
 
+
+
+
 // changing questions on button click
 let questionCount = 0;
 let questionNumber = 1;
@@ -47,6 +50,8 @@ nextBtn.onclick = () => {
 // qestion answers options *******************************
 const optionList = document.querySelector(".option-list");
 
+
+// getting questions and options from array   
 function showQuestions(index) {
   const questionText = document.querySelector(".question-text");
   questionText.textContent = `${questions[index].numb}. ${questions[index].question}`;
@@ -68,15 +73,25 @@ function showQuestions(index) {
 function optionSelected(answer) {
   let userAnswer = answer.textContent;
   let correctAnswer = questions[questionCount].answer;
+  let allOptions = optionList.children.length;
 
-  console.log(userAnswer);
+  // console.log(userAnswer);
 
   if (userAnswer == correctAnswer) {
     answer.classList.add("correct");
-    console.log(correctAnswer);
+    // console.log(correctAnswer);
   } else {
     answer.classList.add("incorrect");
   }
+
+
+  // if user has selected disable all options
+
+  for(let i = 0; i < allOptions; i++)
+  {
+    optionList.children[i].classList.add("disabled");
+  }
+
 }
 
 function questionCounter(index) {
@@ -84,7 +99,12 @@ function questionCounter(index) {
   questionTotal.textContent = `${index} of ${questions.length} Questions`;
 }
 
-// Question section meaking
+
+
+
+
+
+// Question section making
 let questions = [
   {
     numb: 1,
@@ -132,6 +152,13 @@ let questions = [
     options: ["(A) XMLNS", "(B) XmlNameSpace", "(C) Xmlns", "(D) XmlNs"],
   },
 ];
+
+
+
+
+
+
+
 
 // *******************   result section  ******************************
 const resultBox = document.querySelector(".result-box");
