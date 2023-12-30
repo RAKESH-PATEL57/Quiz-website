@@ -182,8 +182,8 @@ let questions = [
 
 // *******************   result section  ******************************
 const resultBox = document.querySelector(".result-box");
-const goHomeBtn = document.querySelector(".goHome-btn");
 const tryAgainBtn = document.querySelector(".tryAgain-btn");
+const goHomeBtn = document.querySelector(".goHome-btn");
 
 const scoreText = document.querySelector(".score-text");
 scoreText.textContent = `Your Score ${userScore} out of ${questions.length}`;
@@ -216,7 +216,7 @@ function showResultBox() {
   const circularProgress = document.querySelector('.circular-progress');  
   const progressValue = document.querySelector('.progress-value');  
 
-  let progressStartValue = 0;
+  let progressStartValue = -1;
   let progressEndValue = (userScore/ questions.length) * 100;
   let speed = 20;
 
@@ -235,6 +235,20 @@ function showResultBox() {
 
 tryAgainBtn.onclick = () => {
   quizBox.classList.add("quizBox-Show-hide");
+  nextBtn.classList.remove('active');
+  resultBox.classList.remove("resultBox-Show-hide");
+
+  questionCount = 0;
+  questionNumber = 1;
+  userScore = 0;
+
+  showQuestions(questionCount);
+  questionCounter(questionNumber);
+};
+
+goHomeBtn.onclick = () => {
+  quizSection.classList.remove("quizSection-Show-hide");
+  nextBtn.classList.remove('active');
   resultBox.classList.remove("resultBox-Show-hide");
 
   questionCount = 0;
