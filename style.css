@@ -358,8 +358,15 @@ header .logo:hover, .navbar a:hover
     cursor: pointer;
     color: white;
     font-weight: 600;
-    /* pointer-events: none; */
+    pointer-events: none;
     transition: .3s;
+}
+
+.quiz-footer .nextBtn.active
+{
+    pointer-events: auto;
+    background: var(--alpha-color);
+    border-color: var(--alpha-color);
 }
 
 .quiz-footer .nextBtn:hover
@@ -460,7 +467,7 @@ header .logo:hover, .navbar a:hover
     font-weight: 600;
     margin: 0 20px;
     cursor: pointer;
-    transition: .5s;
+    transition: .3s;
 }
 
 .buttons button:nth-child(1):hover

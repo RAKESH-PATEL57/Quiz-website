@@ -24,6 +24,7 @@ continueBtn.onclick = () => {
 
   showQuestions(0);
   questionCounter(1);
+  headerScore();
 };
 
 
@@ -42,6 +43,8 @@ nextBtn.onclick = () => {
     showQuestions(questionCount);
     questionNumber++;
     questionCounter(questionNumber);
+
+    nextBtn.classList.remove('active');
   } else {
     showResultBox();
   }
@@ -79,24 +82,41 @@ function optionSelected(answer) {
 
   if (userAnswer == correctAnswer) {
     answer.classList.add("correct");
+    userScore += 1;
+    headerScore();
     // console.log(correctAnswer);
   } else {
     answer.classList.add("incorrect");
+
+    // if answer incorrect, auto selected correct answer
+    for(let i = 0; i < allOptions; i++)
+    {
+      if(optionList.children[i].textContent == correctAnswer)
+      {
+        optionList.children[i].setAttribute('class', 'option correct');
+      }
+    }
   }
 
 
   // if user has selected disable all options
-
   for(let i = 0; i < allOptions; i++)
   {
     optionList.children[i].classList.add("disabled");
   }
 
+  nextBtn.classList.add('active');
 }
 
 function questionCounter(index) {
   const questionTotal = document.querySelector(".question-total");
   questionTotal.textContent = `${index} of ${questions.length} Questions`;
+}
+
+function headerScore()
+{
+  const headerScoreText = document.querySelector('.header-score')
+  headerScoreText.textContent = `Score: ${userScore} / ${questions.length}`;
 }
 
 
@@ -188,6 +208,9 @@ let progress = setInterval(() => {
 function showResultBox() {
   quizBox.classList.remove("quizBox-Show-hide");
   resultBox.classList.add("resultBox-Show-hide");
+
+  const scoreText = document.querySelector('.score-text');  
+  scoreText.textContent = `Yur Score ${userScore} out of ${questions.length}`;
 }
 
 tryAgainBtn.onclick = () => {
